@@ -1,0 +1,104 @@
+<html>
+    <head>
+<title>Zadania</title>
+    </head>
+    <body>
+        
+        <script>
+             /*
+                Zadanie 1
+                Napisz funkcję, która przyjmie liczbę i wyświetli
+                informację czy jest ona parzysta czy nieparzysta.
+                Zadanie 2
+                Napisz funkcję, która przyjmie dwie wartości
+                i wyświetli:
+                * informację czy wartości są równe czy nie
+                * informację czy wartości są identyczne czy nie
+                 
+                Zadanie 3
+                Napisz funkcję, która przymie liczbę 
+                i wyswietli nazwę dnia tygodnia.
+                Zadanie 4*
+                Napisz funkcję, która pobierze liczbę
+                i wyświetli ją w systemie binarnym.
+            */
+            function Parzyste(number)
+            {
+            var number;
+            if ( number %2 == 0)
+            document.write("Parzysta<br/>");
+            else
+            document.write("Nieparzysta<br/>")
+            }
+
+            function Rowne(number1, number2)
+            {
+                var number1, number2;
+                if (number1 == number2 )
+                document.write("Liczba "+number1+" jest rowna liczbie "+number2+"<br/>")
+                else
+                document.write("Liczba "+number1+" nie jest rowna liczbie "+number2+"<br/>")
+            }
+
+            function Identyczne(number3, number4)
+            {
+                var number3, number4;
+                if (number3 === number4 )
+                document.write("Liczba "+number3+" jest identyczna jak liczba "+number4+"<br/>")
+                else
+                document.write("Liczba "+number3+" nie jest identyczna jak liczba "+number4+"<br/>")
+            }
+
+            function DzienTygodnia(dzien)
+            {
+                var dzien;
+                switch (dzien)
+                {
+                    case 1:
+                    document.write("Poniedzialek");
+                    break;
+
+                    case 2:
+                    document.write("Wtorek");
+                    break;
+                    
+                    case 3:
+                    document.write("Sroda");
+                    break;
+
+                    case 4:
+                    document.write("Czwartek");
+                    break;
+
+                    case 5:
+                    document.write("Piatek");
+                    break;
+                    
+                    case 6:
+                    document.write("Sobota");
+                    break;
+                }
+            }
+
+            Parzyste(5);
+            Parzyste(4);
+            Parzyste(8);
+            Parzyste(13);
+
+            document.write("<br/>")
+
+            Rowne(1, 2);
+            Rowne(1, 1);
+
+            document.write("<br/>")
+
+            Identyczne(3, 3);
+            Identyczne(2, 1);
+
+            document.write("<br/>")
+
+            DzienTygodnia(1);
+
+        </script>
+    </body>
+</html>
