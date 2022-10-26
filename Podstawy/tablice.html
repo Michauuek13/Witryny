@@ -1,0 +1,35 @@
+<html>
+    <head>
+<title></title>
+    </head>
+    <body>
+        <script>
+            let tablicaLiczb = [20];
+            tablicaLiczb[0] = 5;
+            tablicaLiczb[1] = 7;
+            tablicaLiczb[2] = 6;
+            tablicaLiczb[3] = 2;
+
+
+            function SzukajMax(paramTab)
+            {
+                let aktMax = paramTab[0];
+                for (let i = 0; i <tablicaLiczb.lenght; i++)
+                if(aktMax < paramTab[i])
+                    aktMax = paramTab[i];
+                document.write("Największa wartośc " + aktMax);
+            }
+            //SzukajMax(tablicaLiczb)
+
+            function wysiwtlParametry(p1 ,p2)
+            {
+                document.write( p1 + "<br/>");
+                document.write( p2 + "<br/>");
+
+                for(let i = 0; i < arguments; i++)
+                    document.write(arguments[i] + "<br/>")
+            }
+            wysiwtlParametry(12 , "Ala");
+        </script>
+    </body>
+</html>
