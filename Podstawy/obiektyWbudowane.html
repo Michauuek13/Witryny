@@ -1,0 +1,34 @@
+<html>
+    <head>
+<title>obiekty.wbudowane</title>
+    </head>
+    <body>
+        <script>
+            //string
+            let tekst = "string";
+            let tekst2 = new String("Tekst");
+            document.write("Dlugosc " + tekst.length +"<br/>")
+            document.write(tekst.substring(2,4)+"<br/>")
+            document.write(tekst.toUpperCase() +"<br/>");
+
+            //typ array
+            let tab1 = [];
+            let tab2 = new Array();
+
+            tab1[0] = 5;
+            tab1[1] = 4;
+            tab1[2] = 3;
+
+            for(let i = 0; i < tab1.length ; i++)
+            document.write(tab1[i] + " ,")
+
+            document.write("<br/>")
+            document.write(tab1.join() + " ,");
+
+            //typ date
+            let data = new Date();
+            document.write(data.toString() +"<br/>")
+            //getFullYear
+        </script>
+    </body>
+</html>
