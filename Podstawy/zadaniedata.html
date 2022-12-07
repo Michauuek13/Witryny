@@ -1,0 +1,132 @@
+<html>
+    <head>
+<title></title>
+    </head>
+    <body>
+        <script>
+            let data = new Date();
+
+            var znak = "0";
+
+            document.write("Dzisiaj jest: <br/>")
+            var dzien = data.getDay();
+                switch (dzien)
+                {
+                    case 1:
+                    document.write("Poniedzialek");
+                    break;
+
+                    case 2:
+                    document.write("Wtorek");
+                    break;
+                    
+                    case 3:
+                    document.write("Sroda");
+                    break;
+
+                    case 4:
+                    document.write("Czwartek");
+                    break;
+
+                    case 5:
+                    document.write("Piatek");
+                    break;
+                    
+                    case 6:
+                    document.write("Sobota");
+                    break;
+
+                    case 0:
+                    document.write("Niedziela");
+                    break;
+
+                    case 7:
+                    document.write("Niedziela");
+                    break;
+                }
+
+                var miesiac = data.getMonth();
+                var miesiacNazwa;
+                switch (miesiac)
+                {
+                    case 1:
+                    miesiacNazwa = "Styczen"
+                    break;
+
+                    case 2:
+                    miesiacNazwa = "Luty"
+                    break;
+                    
+                    case 3:
+                    miesiacNazwa = "Marzec"
+                    break;
+
+                    case 4:
+                    miesiacNazwa = "Kwiecien"
+                    break;
+
+                    case 5:
+                    miesiacNazwa = "Maj"
+                    break;
+                    
+                    case 6:
+                    miesiacNazwa = "Czerwiec"
+                    break;
+
+                    case 7:
+                    miesiacNazwa = "Lipiec"
+                    break;
+
+                    case 8:
+                    miesiacNazwa = "Sierpien"
+                    break;
+
+                    case 9:
+                    miesiacNazwa = "Wrzesien"
+                    break;
+
+                    case 10:
+                    miesiacNazwa = "Pazdziernik"
+                    break;
+
+                    case 11:
+                    miesiacNazwa = "Listopad"
+                    break;
+
+                    case 12:
+                    miesiacNazwa = "Grudzien"
+                    break;
+
+                }
+
+                var godzina;
+                if (data.getHours() < 10)
+                {
+                    godzina = (znak + data.getHours())
+                }
+                else
+                godzina = data.getHours();
+
+                var minuty;
+                if (data.getMinutes() < 10)
+                {
+                    minuty = (znak + data.getMinutes())
+                }
+                else
+                minuty = data.getMinutes();
+
+                var sekundy;
+                if (data.getSeconds() < 10)
+                {
+                    sekundy = (znak + data.getSeconds())
+                }
+                else
+                sekundy = data.getSeconds();
+
+
+            document.write( ", " + (znak + data.getDate()) + " " + miesiacNazwa + " " + data.getFullYear() + " roku")
+            document.write("<br/>")
+            document.write("Godzina: " + godzina + ":"+ minuty+ ":" + sekundy)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Przykładowy program</title>
+    </head>
+    <body>
+        <p>Podaj imię:</p>
+        <input type="text" id="nameId" />
+        <p>Podaj wiek:</p>
+        <input type="text" id="ageId"/>
+        <br/>
+        <input type="button" value="Wyświetl informację" onclick="getInfo()"/>
+        <br/>
+        <div id="helloId">Tutaj po naciśnięciu przycisku ma pojawić się:
+            * jesli walidacja przejdzie poprawnie:
+                "Witaj 'imie' na stronie" - gdzie 'imie' jest to wartość z pola wprowadzanego
+            * jeśli walidacja nie przejdzie poprawnie:
+                to powinien znaleść się odpowiedni komunikat informujący co jest nie tak
+        </div>
+        <div id="legalAgeId">
+            Tutaj po naciśnięciu przycisku ma pojawić się:
+            * jesli walidacja przejdzie poprawnie:
+                "Jesteś pełnoletni/niepełnoletni" - w zależności od wieku
+            * jeśli walidacja nie przejdzie poprawnie: 
+                nic
+        </div>
+
+        <br/>
+        <div>Zasady:<br/>
+            * Poprawne formatowanie kodu<br/>
+            * Czytelność identyfikatorów<br/>
+            * DRY - don't repeat yourself<br/>
+            * KISS - Keep it simple stupid<br/>
+            * YAGNI - You aren't gonna need it<br/>
+            * SOLID - S - Single responsibility principle <br/>
+        </div>
+
+        <script>
+
+            function getInfo()
+            {
+                var name = document.getElementById("nameId").value
+                var age = document.getElementById("ageId").value
+
+                if (name == "" || name == null)
+                {
+                document.getElementById("helloId").innerText = "Podaj Imie";
+                document.getElementById("legalAgeId").innerText = " ";
+                }
+                else
+                {
+                if (age == "" || age == null)
+                {
+                document.getElementById("helloId").innerText = "Podaj Wiek";
+                document.getElementById("legalAgeId").innerText = " ";
+                }
+                else
+                {
+                if(isNaN(parseInt(age)) == true)
+                {
+                    if(age > 0 )
+                        {
+                            if (age > 110)
+                            {
+                            document.getElementById("helloId").innerText = "Za wysoki wiek";
+                            document.getElementById("legalAgeId").innerHTML = " ";
+                            }
+                            else
+                            {
+                            document.getElementById("helloId").innerText = "Witaj " + name + " na stronie";
+                            if(age >= 18)
+                            document.getElementById("legalAgeId").innerText = "Jesteś pełnoletni";
+                            if (age < 18)
+                            document.getElementById("legalAgeId").innerText = "Jestes niepelnoletni";      
+                            }
+                        }
+                    if (age < 0)
+                        {
+                            document.getElementById("helloId").innerText = "Wiek ujemny";
+                            document.getElementById("legalAgeId").innerText = " ";
+                        }
+                }
+                else
+                {
+                document.getElementById("helloId").innerText = "Litery w wieku";
+                document.getElementById("legalAgeId").innerText = " ";
+                }
+                }
+                }
+                
+
+            }
+
+        </script>
+    </body>
+</html>

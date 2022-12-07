@@ -1,0 +1,52 @@
+<html>
+    <head>
+<title>sprawdzian</title>
+    </head>
+    <body>
+        <script>
+            function zadanie2()
+            {
+                document.write("Jestem Michał Kopacz");
+            }
+
+            function zadanie3(number)
+            {
+                if (number %2 == 0)
+                    document.write("Liczba " + number + " jest parzysta</br>");
+                else
+                    document.write("Liczba " + number + " jest nieparzysta</br>");
+            }
+
+            function wieksze(number1 , number2)
+            {
+                if (number1 > number2)
+                    document.write("Liczba " + number1 + " jest większa od " + number2 +"</br>");
+                if (number2 > number1)
+                    document.write("Liczba " + number2 + " jest większa od " + number1+"</br>");
+                else if (number1 == number2)
+                    document.write("Liczby są równe"+"</br>");
+            }
+
+            function zadanie5()
+            {
+                var number = 0;
+                for( var i = 0; number < 100; i++)
+                {
+                    number = i;
+                    document.write(number + ", ");
+                }
+            }
+
+            function zadanie6()
+            {
+            document.write("</br>" + Date());
+            }
+
+            zadanie3(4);
+            zadanie3(3);
+            wieksze(1 ,2)
+            zadanie5();
+            zadanie6();
+        </script>
+    </body>
+</html>

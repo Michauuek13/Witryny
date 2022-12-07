@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RPG Game Menu</title>
+    <style>
+        /* Add some styles to the game menu */
+        .menu {
+            font-family: sans-serif;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .menu-item {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h1>RPG Game Menu</h1>
+        <div class="menu-item">
+            <button onclick="startGame()">Start game</button>
+        </div>
+        <div class="menu-item">
+            <button onclick="loadGame()">Load game</button>
+        </div>
+        <div class="menu-item">
+            <button onclick="showOptions()">Options</button>
+        </div>
+        <div class="menu-item">
+            <button onclick="quitGame()">Quit</button>
+        </div>
+    </div>
+
+    <script>
+        // Define functions to handle the user's choice
+        function startGame() {
+            console.log("Starting game...");
+            alert("Starting game");
+        }
+
+        function loadGame() {
+            console.log("Loading game...");
+        }
+
+        function showOptions() {
+            console.log("Showing options...");
+        }
+
+        function quitGame() {
+            console.log("Quitting game...");
+        }
+    </script>
+</body>
+</html>
