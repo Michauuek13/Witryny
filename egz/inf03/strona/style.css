@@ -1,0 +1,44 @@
+.banner
+{
+    background-color: rgb(120, 0, 46);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    background-position: center;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.footer
+{
+background-color: rgb(120, 0, 46);
+height: 100px;
+justify-content: center;
+text-align: center;
+display: flex;
+font-size: 20px;
+background-position: center;
+padding: 5px;
+}
+
+.banner2
+{
+    background-color: rgb(173, 20, 87);
+position: relative;
+width: 100%;
+height: 100px;
+}
+
+.bannerPrawy
+{
+    background-color: rgb(173, 20, 87);
+    position: fixed;
+    display: flex;
+    width: 500px;
+    height: 275px;
+    right: 8;
+    top: 50%;
+    margin-top: -300px;
+}

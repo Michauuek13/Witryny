@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Stacja paliw</title>
+    </head>
+    <body>
+        <div class="banner"><b>Całodobowa stacja paliw</b></div>
+        <div class="banner2">Ok</div>
+        <div class="bannerPrawy">ok</div>
+        <h6>Rodzaj paliwa(1- benzyna, 2- olej napędowy)</h6>
+        <input type="text" id="RodzajPaliwa">
+        <br>
+        <h6>Podaj ilość</h6>
+        <input type="text" id="Ilosc">
+        <br>
+        <input type="button"  value="Oblicz" onclick="oblicz()">
+        <div id="cena"></div>
+        <br>
+        <div class="footer"><h3>Strone opraclowal: fajny czlowiek</h3></div>
+        <script>
+        
+            function oblicz()
+            {
+                var rodzaj = document.getElementById("RodzajPaliwa").value;
+                var ilosc = document.getElementById("Ilosc").value;
+                if(rodzaj == 1)
+                {
+                    var cena = ilosc * 4 ;
+                }
+                if(rodzaj == 2)
+                {
+                    var cena = ilosc * 3.5;
+                }
+                if(rodzaj == 0 || rodzaj >2|| ilosc == 0 || ilosc < 0)
+                {
+                    var cena = 0
+                }
+                document.getElementById("cena").innerText = "Koszt paliwa " + cena + "zł";
+            }
+        </script>
+    </body>
+</html>
